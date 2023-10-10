@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyApp</string>
+    <string-array name="feelings">
+        <item>Sad</item>
+        <item>Dissatisfied</item>
+        <item>Satisfied</item>
+        <item>Happy</item>
+    </string-array>
+</resources>
