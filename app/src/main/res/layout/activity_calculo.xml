@@ -31,7 +31,7 @@
             android:textColor="@color/black" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txtValor"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Valor da conta"
@@ -39,7 +39,9 @@
             app:helperTextEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtValor"
                 android:layout_width="match_parent"
+                android:inputType="number"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -52,15 +54,15 @@
             android:textColor="@color/black" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txtQualidade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Qualidade do atendimento">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtQualidade"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="none"/>
+                android:inputType="number"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
