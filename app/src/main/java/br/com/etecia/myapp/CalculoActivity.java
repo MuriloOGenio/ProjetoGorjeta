@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -15,7 +16,7 @@ import java.util.EventListener;
 public class CalculoActivity extends AppCompatActivity {
 
     TextInputEditText txtValor;
-    TextInputEditText txtQualidade;
+    Spinner spinner;
     Button btnCalcular;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,7 @@ public class CalculoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_calculo);
 
         btnCalcular = findViewById(R.id.btnCalcular);
-        txtQualidade = findViewById(R.id.txtQualidade);
+        spinner = findViewById(R.id.spinner);
         txtValor = findViewById(R.id.txtValor);
 
 
@@ -31,13 +32,35 @@ public class CalculoActivity extends AppCompatActivity {
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int valor, qualidade;
+                int valor, qualidade = 0;
                 valor = Integer.parseInt(txtValor.getText().toString());
-                qualidade = Integer.parseInt(txtQualidade.getText().toString());
+
+                switch (spinner.getSelectedItem().toString()) {
+                    case "Excelente":
+                        qualidade = 10;
+                        break;
+                    case "Ótimo":
+                        qualidade = 8;
+                        break;
+                    case "Bom":
+                        qualidade = 5;
+                        break;
+                    case "Ruim":
+                        qualidade = 2;
+                        break;
+                    default:
+                        break;
+                }
 
                 Gorjeta gorjeta = new Gorjeta();
                 gorjeta.setValor(valor);
                 gorjeta.setQualidade(qualidade);
+
+                gorjeta.calcularGorjeta();
+
+                Toast.makeText(getApplicationContext(),
+                        "O valor da gorjeta é: " + gorjeta.getGorjeta(),
+                        Toast.LENGTH_SHORT).show();
             }
         });
     }

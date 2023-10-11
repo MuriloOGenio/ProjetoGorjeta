@@ -2,7 +2,7 @@ package br.com.etecia.myapp;
 
 public class Gorjeta {
     public float valor;
-    public int qualidade;
+    public float qualidade;
     protected float gorjeta;
     protected float valorTotal;
 
@@ -22,7 +22,7 @@ public class Gorjeta {
         this.valor = valor;
     }
 
-    public int getQualidade() {
+    public float getQualidade() {
         return qualidade;
     }
 

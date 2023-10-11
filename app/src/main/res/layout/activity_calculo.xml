@@ -53,18 +53,24 @@
             android:text="Qualidade:"
             android:textColor="@color/black" />
 
-        <com.google.android.material.textfield.TextInputLayout
+        <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Qualidade do atendimento">
+            android:id="@+id/spinner"
+            android:entries="@array/spinner"
+            />
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Qualidade do atendimento">-->
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtQualidade"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"/>
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/txtQualidade"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:inputType="number"/>-->
 
-        </com.google.android.material.textfield.TextInputLayout>
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
 
         <Button
             android:id="@+id/btnCalcular"
